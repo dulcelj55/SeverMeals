@@ -49,6 +49,8 @@ let databaseMeals  = [
     }
 ];
 
+app.use(express.static(path.join(__dirname, 'dist')));
+
 app.get('/meals', (req, res)=>{
     res.send(databaseMeals)
 })
